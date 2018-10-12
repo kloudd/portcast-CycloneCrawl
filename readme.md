@@ -6,7 +6,7 @@ Portcast - Cyclone Crawler
 
 Portcast - Cyclone Crawler
 The cyclone information from  http://rammb.cira.colostate.edu/products/tc_realtime/index.asp will be crawled and stored in postgres db.
-Only the new data will be added to the db. We have 2 different docker containers for the python project and postgres db.
+Only the new data will be added to the db. We have 2 different docker containers for the python project and postgres db
 
 ### Prerequisites
 
@@ -102,11 +102,6 @@ Give an example
 followed pep-8 and pylint.
 ```
 
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Author
 
