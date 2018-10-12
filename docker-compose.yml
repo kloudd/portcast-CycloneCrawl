@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: scrapy crawl cyclone
+    volumes:
+      - .:/code
+    ports:
+      - "5432:5432"
+    depends_on:
+      - db
