@@ -4,7 +4,6 @@
     The scrapy items are parsed to the models.
     - Sumit Singh Kanwal
 """
-from datetime import datetime
 from sqlalchemy.orm import sessionmaker
 from .models import db_connect, create_table, CycloneDB, CycloneForecastDB,\
     CycloneTrackHistoryDB, ForecastTrackDB
@@ -99,7 +98,7 @@ class PortcastPipeline(object):
 
         cyclone_db_obj = CycloneTrackHistoryDB()
         cyclone_db_obj.cyclone_id = cyclone_id
-        cyclone_db_obj.synoptic_time = datetime.strptime(item["synoptic_time"], '%Y%m%d%H%M')
+        cyclone_db_obj.synoptic_time = item["synoptic_time"]
         cyclone_db_obj.latitude = int(item["latitude"])
         cyclone_db_obj.longitude = int(item["longitude"])
         cyclone_db_obj.intensity = int(item["intensity"])

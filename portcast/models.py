@@ -7,7 +7,7 @@
 from sqlalchemy import create_engine, Column, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (
-    Integer, DateTime, Text)
+    Integer, Text)
 
 from scrapy.utils.project import get_project_settings
 
@@ -59,7 +59,7 @@ class CycloneTrackHistoryDB(DECLARATIVEBASE):
 
     id = Column(Integer, primary_key=True)
     cyclone_id = Column(Integer, ForeignKey(CycloneDB.id))
-    synoptic_time = Column('synoptic_time', DateTime())
+    synoptic_time = Column('synoptic_time', Text())
     latitude = Column('latitude', Integer())
     longitude = Column('longitude', Integer())
     intensity = Column('intensity', Integer())
